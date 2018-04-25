@@ -14,12 +14,15 @@ Summary: A generic test automation framework
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/robotframework-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/robotframework-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/robotframework-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/robotframework-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/robotframework/badges/version.svg)](https://anaconda.org/conda-forge/robotframework)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/robotframework/badges/downloads.svg)](https://anaconda.org/conda-forge/robotframework)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-robotframework-green.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) |
 
 Installing robotframework
 =========================
