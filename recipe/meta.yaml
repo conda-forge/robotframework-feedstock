@@ -24,6 +24,8 @@ build:
     - rebot = robot.rebot:rebot_cli
 
 requirements:
+  build:
+    - patch
   host:
     - pip
     - python
