@@ -18,14 +18,12 @@ build:
   noarch: python
   script:
     - cd dist
-    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - robot = robot.run:run_cli
     - rebot = robot.rebot:rebot_cli
 
 requirements:
-  build:
-    - patch
   host:
     - pip
     - python
@@ -62,7 +60,6 @@ test:
     - robot.running.timeouts
     - robot.utils
     - robot.variables
-    - robot.writer
   commands:
     - robot --version
     - rebot --version
@@ -71,7 +68,7 @@ about:
   home: http://robotframework.org
   license: Apache-2.0
   license_file: dist/LICENSE.txt
-  summary: Generic automation framework for acceptance testing and RPA
+  summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
   doc_url: http://robotframework.org/robotframework/{{ version }}/RobotFrameworkUserGuide.html
   dev_url: https://github.com/robotframework/robotframework
   description: >
