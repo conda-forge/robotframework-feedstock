@@ -22,18 +22,20 @@ build:
   entry_points:
     - robot = robot.run:run_cli
     - rebot = robot.rebot:rebot_cli
+    - libdoc = robot.libdoc:libdoc_cli
 
 requirements:
   host:
     - pip
-    - python
+    - python >=2.7,<3|>=3.5
   run:
-    - python
+    - python >=2.7,<3|>=3.5
 
 test:
   requires:
     - docutils
     - enum34  # [py<35]
+    - jsonschema
     - lxml
     - pillow
     - pygments
