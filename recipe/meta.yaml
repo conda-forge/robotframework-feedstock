@@ -43,6 +43,7 @@ test:
   source_files:
     - src/utest
     - src/atest
+    - src/doc/schema
     - src/README.rst
   imports:
     - robot
