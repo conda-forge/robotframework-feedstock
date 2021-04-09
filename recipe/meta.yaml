@@ -1,5 +1,5 @@
 {% set name = "robotframework" %}
-{% set version = "4.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-    sha256: a02a6f4af3b0830e4396058694c333cb63eb47f50acf6723be34f0f7a4d73ad7
+    sha256: 9fa609ceb78f67b1476edce8a7011b16bf3ab41c0fb8c211de6c99955eaf9fde
     folder: dist
   - url: https://github.com/robotframework/robotframework/archive/v{{ version }}.tar.gz
-    sha256: 2adce6baab57a1d4d6d34ece3234ef801f22ecee5f16e48470221e8c5febdb14
+    sha256: 962dbb167cb803f2a953cfd4fa7aaf39ed15ed5115a6eb334d561bb6f9d8f40e
     folder: src
 
 build:
