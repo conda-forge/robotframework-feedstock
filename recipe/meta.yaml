@@ -79,7 +79,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - windelbouwman
     - abloemert
-    - alexvds
     - bollwyvl
