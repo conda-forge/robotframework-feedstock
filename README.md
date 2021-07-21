@@ -123,7 +123,5 @@ Feedstock Maintainers
 =====================
 
 * [@abloemert](https://github.com/abloemert/)
-* [@alexvds](https://github.com/alexvds/)
 * [@bollwyvl](https://github.com/bollwyvl/)
-* [@windelbouwman](https://github.com/windelbouwman/)
 
