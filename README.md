@@ -11,7 +11,7 @@ Summary: Generic automation framework for acceptance testing and robotic process
 
 Development: https://github.com/robotframework/robotframework
 
-Documentation: http://robotframework.org/robotframework/4.1.2/RobotFrameworkUserGuide.html
+Documentation: http://robotframework.org/robotframework/4.1.3/RobotFrameworkUserGuide.html
 
 Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -62,7 +62,8 @@ conda search robotframework --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
