@@ -5,13 +5,13 @@ Home: http://robotframework.org
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
 
 Development: https://github.com/robotframework/robotframework
 
-Documentation: http://robotframework.org/robotframework/4.1.3/RobotFrameworkUserGuide.html
+Documentation: http://robotframework.org/robotframework/5.0/RobotFrameworkUserGuide.html
 
 Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -22,8 +22,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4299&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/robotframework-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4299&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/robotframework-feedstock?branchName=main">
       </a>
     </td>
   </tr>
