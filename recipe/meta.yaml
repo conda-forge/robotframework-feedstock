@@ -69,7 +69,9 @@ test:
 about:
   home: http://robotframework.org
   license: Apache-2.0
-  license_file: dist/LICENSE.txt
+  license_file: 
+    - dist/LICENSE.txt
+    - dist/COPYRIGHT.txt
   summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
   doc_url: http://robotframework.org/robotframework/{{ version }}/RobotFrameworkUserGuide.html
   dev_url: https://github.com/robotframework/robotframework
