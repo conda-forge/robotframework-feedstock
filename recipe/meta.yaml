@@ -26,9 +26,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=2.7,<3|>=3.5
+    - python >=3.6
   run:
-    - python >=2.7,<3|>=3.5
+    - python >=3.6
 
 test:
   requires:
