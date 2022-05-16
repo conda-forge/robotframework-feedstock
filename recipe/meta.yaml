@@ -1,4 +1,4 @@
-{% set version = "5.0" %}
+{% set version = "5.0.1" %}
 
 package:
   name: robotframework
@@ -6,10 +6,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/r/robotframework/robotframework-{{ version }}.zip
-    sha256: bffecba8c43d4294936d921f0af4941079039edce88194769133719732c608bc
+    sha256: cf5dc59777ed9d8c3e1e91fb4403454890242867735681f22f4f22dbb2a20fc8
     folder: dist
   - url: https://github.com/robotframework/robotframework/archive/v{{ version }}.tar.gz
-    sha256: 7ace8c52bb9b1e94db30ac0dc1d12004ef496cad1800d6a8b47cf397c25338ab
+    sha256: 93a9a7504738d7493994c3a7f4f13b4591beb746a26cb141afdb0435909b9c81
     folder: src
 
 build:
@@ -69,7 +69,7 @@ test:
 about:
   home: http://robotframework.org
   license: Apache-2.0
-  license_file: 
+  license_file:
     - dist/LICENSE.txt
     - dist/COPYRIGHT.txt
   summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
