@@ -1,7 +1,7 @@
 About robotframework
 ====================
 
-Home: http://robotframework.org
+Home: https://robotframework.org
 
 Package license: Apache-2.0
 
@@ -11,7 +11,7 @@ Summary: Generic automation framework for acceptance testing and robotic process
 
 Development: https://github.com/robotframework/robotframework
 
-Documentation: http://robotframework.org/robotframework/6.0.2/RobotFrameworkUserGuide.html
+Documentation: https://robotframework.org/robotframework/6.0.2/RobotFrameworkUserGuide.html
 
 Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -34,6 +34,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-_robotframework_tests-green.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-robotframework-green.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) |
 
 Installing robotframework
@@ -46,41 +47,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `robotframework` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `_robotframework_tests, robotframework` can be installed with `conda`:
 
 ```
-conda install robotframework
-```
-
-or with `mamba`:
-
-```
-mamba install robotframework
-```
-
-It is possible to list all of the versions of `robotframework` available on your platform with `conda`:
-
-```
-conda search robotframework --channel conda-forge
+conda install _robotframework_tests robotframework
 ```
 
 or with `mamba`:
 
 ```
-mamba search robotframework --channel conda-forge
+mamba install _robotframework_tests robotframework
+```
+
+It is possible to list all of the versions of `_robotframework_tests` available on your platform with `conda`:
+
+```
+conda search _robotframework_tests --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search _robotframework_tests --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search robotframework --channel conda-forge
+mamba repoquery search _robotframework_tests --channel conda-forge
 
-# List packages depending on `robotframework`:
-mamba repoquery whoneeds robotframework --channel conda-forge
+# List packages depending on `_robotframework_tests`:
+mamba repoquery whoneeds _robotframework_tests --channel conda-forge
 
-# List dependencies of `robotframework`:
-mamba repoquery depends robotframework --channel conda-forge
+# List dependencies of `_robotframework_tests`:
+mamba repoquery depends _robotframework_tests --channel conda-forge
 ```
 
 
