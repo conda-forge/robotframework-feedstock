@@ -11,7 +11,7 @@ Summary: Generic automation framework for acceptance testing and robotic process
 
 Development: https://github.com/robotframework/robotframework
 
-Documentation: https://robotframework.org/robotframework/6.1.1/RobotFrameworkUserGuide.html
+Documentation: https://robotframework.org/robotframework/7.0/RobotFrameworkUserGuide.html
 
 Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -103,7 +103,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
