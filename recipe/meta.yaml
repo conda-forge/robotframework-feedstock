@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - python >=3.6
+    - python >=3.8
 
 outputs:
   - name: robotframework
@@ -82,9 +82,9 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python >=3.8
       run:
-        - python >=3.6
+        - python >=3.8
         - {{ pin_subpackage('robotframework', exact=True) }}
     test:
       requires:
