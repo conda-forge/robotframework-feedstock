@@ -1,4 +1,4 @@
-{% set version = "7.0" %}
+{% set version = "7.0.1" %}
 
 package:
   name: robotframework-split
@@ -6,10 +6,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/r/robotframework/robotframework-{{ version }}.zip
-    sha256: 04623f758346c917db182e17591ffa474090560c02ed5a64343902e72b7b4bd5
+    sha256: 58d01b84cd7eccea69f2dbe13cbcbff1299e551168d3b88c25617b0c9d6ddc75
     folder: dist
   - url: https://github.com/robotframework/robotframework/archive/v{{ version }}.tar.gz
-    sha256: 6ba84ed67a918204d32bd311e23a0b3b8706416a84ffd79498df67596d7ff0a1
+    sha256: 6c29b9d4e6e9bec36d88a38916eeb1b685f77a9507ffb2fc9ebb465265b5adb9
     folder: src
 
 build:
