@@ -1,5 +1,9 @@
 {% set version = "7.1" %}
 
+# handle undefined PYTHON in `noarch: generic` outputs
+{% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
+
+
 package:
   name: robotframework-split
   version: {{ version }}
@@ -13,79 +17,69 @@ source:
     folder: src
 
 build:
-  number: 0
   noarch: python
+  number: 0
+  script:
+    - cd dist
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  entry_points:
+    - robot = robot.run:run_cli
+    - rebot = robot.rebot:rebot_cli
+    - libdoc = robot.libdoc:libdoc_cli
 
 requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - python >=3.8
 
+test:
+  requires:
+    - pip
+  imports:
+    - robot
+    - robot.api
+    - robot.conf
+    - robot.htmldata
+    - robot.libdocpkg
+    - robot.libraries
+    - robot.model
+    - robot.output
+    - robot.output.console
+    - robot.parsing
+    - robot.reporting
+    - robot.result
+    - robot.running
+    - robot.running.arguments
+    - robot.running.timeouts
+    - robot.utils
+    - robot.variables
+  commands:
+    - pip check
+    # the `--version` commands return rc 251
+    # - robot --version
+    # - rebot --version
+    # - libdoc --version
+    # generate simple test file (`echo` and `>>` are cross-platform)
+    - echo "*** Test Cases ***"                   >> test-{{ version }}.robot
+    - echo "Hello World"                          >> test-{{ version }}.robot
+    - echo "    Log   %{PKG_NAME} %{PKG_VERSION}" >> test-{{ version }}.robot
+    # smoke test
+    - robot test-{{ version }}.robot
+    - rebot output.xml
+    - libdoc test-{{ version }}.robot test.html
+
 outputs:
   - name: robotframework
-    build:
-      noarch: python
-      script:
-        - cd dist
-        - {{ PYTHON }} -m pip install . -vv
-      entry_points:
-        - robot = robot.run:run_cli
-        - rebot = robot.rebot:rebot_cli
-        - libdoc = robot.libdoc:libdoc_cli
-    requirements:
-      host:
-        - pip
-        - python >=3.6
-      run:
-        - python >=3.6
-    test:
-      requires:
-        - pip
-      imports:
-        - robot
-        - robot.api
-        - robot.conf
-        - robot.htmldata
-        - robot.libdocpkg
-        - robot.libraries
-        - robot.model
-        - robot.output
-        - robot.output.console
-        - robot.parsing
-        - robot.reporting
-        - robot.result
-        - robot.running
-        - robot.running.arguments
-        - robot.running.timeouts
-        - robot.utils
-        - robot.variables
-      commands:
-        - pip check
-        # the `--version` commands return rc 251
-        # - robot --version
-        # - rebot --version
-        # - libdoc --version
-        # generate simple test file (`echo` and `>>` are cross-platform)
-        - echo "*** Test Cases ***"                   >> test-{{ version }}.robot
-        - echo "Hello World"                          >> test-{{ version }}.robot
-        - echo "    Log   %{PKG_NAME} %{PKG_VERSION}" >> test-{{ version }}.robot
-        # smoke test
-        - robot test-{{ version }}.robot
-        - rebot output.xml
-        - libdoc test-{{ version }}.robot test.html
 
   - name: _robotframework_tests
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - pip
-        - python >=3.8
       run:
-        - python >=3.8
-        - {{ pin_subpackage('robotframework', exact=True) }}
+        - {{ pin_subpackage('robotframework', max_pin="x.x.x") }}
     test:
       requires:
         - docutils
