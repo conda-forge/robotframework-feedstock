@@ -3,9 +3,8 @@
 # handle undefined PYTHON in `noarch: generic` outputs
 {% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
 
-
 package:
-  name: robotframework-split
+  name: robotframework
   version: {{ version }}
 
 source:
