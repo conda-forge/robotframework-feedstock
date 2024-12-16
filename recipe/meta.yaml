@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/r/robotframework/robotframework-{{ version }}.zip
+  - url: https://pypi.org/packages/source/r/robotframework/robotframework-{{ version }}.zip
     sha256: f85919c68c4d0837006e5f09dde1ef689f082eba2e7e64d5758753f9ee8bfea9
     folder: dist
   - url: https://github.com/robotframework/robotframework/archive/v{{ version }}.tar.gz
@@ -17,7 +17,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - cd dist
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -29,14 +29,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - robot
     - robot.api
