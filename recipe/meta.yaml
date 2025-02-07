@@ -1,4 +1,4 @@
-{% set version = "7.2" %}
+{% set version = "7.2.2" %}
 
 # handle undefined PYTHON in `noarch: generic` outputs
 {% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
@@ -9,10 +9,10 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/robotframework/robotframework-{{ version }}.tar.gz
-    sha256: 9fc77d40283c26690bbc1563fb7fcadac789afe8695d332ced3fa4696df39eb9
+    sha256: 9c420f6d35e9c8cd4b75b77cc78e36407604534ec4ab0cbddf699d7c0b2fc435
     folder: dist
   - url: https://github.com/robotframework/robotframework/archive/v{{ version }}.tar.gz
-    sha256: bb959742ca19a8e6f89f4ecd806727880e5ea3c81daabee12da30127cfc02d17
+    sha256: 4581c3a0da0c655b629aa1b56e6ff69256abdfa7ab26ae49e52c264c61f175b0
     folder: src
 
 build:
