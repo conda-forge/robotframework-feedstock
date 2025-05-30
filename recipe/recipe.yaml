@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 7.2.2
+  version: "7.3"
 
 recipe:
   name: robotframework
@@ -10,10 +10,10 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/r/robotframework/robotframework-${{ version }}.tar.gz
-    sha256: 9c420f6d35e9c8cd4b75b77cc78e36407604534ec4ab0cbddf699d7c0b2fc435
+    sha256: 676f75a58e34db04cde91922c0bc68d4d73f091b6be753809ce16e9579412323
     target_directory: dist
   - url: https://github.com/robotframework/robotframework/archive/v${{ version }}.tar.gz
-    sha256: 4581c3a0da0c655b629aa1b56e6ff69256abdfa7ab26ae49e52c264c61f175b0
+    sha256: 18bbd5702c031269ab3030231e9a7f95b2517c3a05c5fe21565d73a3734c758c
     target_directory: src
 
 build:
