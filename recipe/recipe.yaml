@@ -42,7 +42,9 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - 3.13.*
           imports:
             - robot
             - robot.api
@@ -63,7 +65,7 @@ outputs:
             - robot.variables
       - requirements:
           run:
-            - python ${{ python_min }}
+            - python ${{ python_min }}.*
         script:
           - echo "*** Test Cases ***"                   >> test-${{ version }}.robot
           - echo "Hello World"                          >> test-${{ version }}.robot
@@ -78,7 +80,8 @@ outputs:
       noarch: generic
     requirements:
       run:
-        - ${{ pin_subpackage('robotframework', upper_bound="x.x.x") }}
+        - ${{ pin_subpackage("robotframework", upper_bound="x.x.x") }}
+        - python ${{ python_min }}.*
     tests:
       - files:
           source:
