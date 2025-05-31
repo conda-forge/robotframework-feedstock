@@ -11,7 +11,7 @@ Summary: Generic automation framework for acceptance testing and robotic process
 
 Development: https://github.com/robotframework/robotframework
 
-Documentation: https://robotframework.org/robotframework/7.2.2/RobotFrameworkUserGuide.html
+Documentation: https://robotframework.org/robotframework/7.3/RobotFrameworkUserGuide.html
 
 Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -33,7 +33,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-_robotframework_tests-green.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-__robotframework__tests-green.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/_robotframework_tests.svg)](https://anaconda.org/conda-forge/_robotframework_tests) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-robotframework-green.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/robotframework.svg)](https://anaconda.org/conda-forge/robotframework) |
 
 Installing robotframework
