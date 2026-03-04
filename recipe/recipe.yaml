@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "7.4.1"
+  version: "7.4.2"
   python_check_max: "3.14"
 
 recipe:
@@ -11,10 +11,10 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/r/robotframework/robotframework-${{ version }}.tar.gz
-    sha256: d645487248a86db1e1a865ce792502792edf5342873f4e4f35d333219cd246c5
+    sha256: 1c934e7f43600de407860cd2bd2fdc41adad4a4a785d8b46b1ed485fdc0f6c9f
     target_directory: dist
   - url: https://github.com/robotframework/robotframework/archive/v${{ version }}.tar.gz
-    sha256: 6fa65c2708f0d48dd7a05bea2dc96943d0e39fdac9b3eb7290e780200b2cec57
+    sha256: 22b272c05ec3ac10e22de1a0f5a73c8bcbc5908e13df75590f509321ea1fe9e0
     target_directory: src
 
 build:
@@ -112,9 +112,9 @@ about:
   summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
   description: >
     Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
-  homepage: https://robotframework.org
+  homepage: https://pypi.org/project/robotframework
   repository: https://github.com/robotframework/robotframework
-  documentation: https://robotframework.org/robotframework/${{ version }}/RobotFrameworkUserGuide.html
+  documentation: https://robotframework.org/robotframework
 
 extra:
   feedstock-name: robotframework
