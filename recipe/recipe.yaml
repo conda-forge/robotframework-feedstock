@@ -112,9 +112,9 @@ about:
   summary: Generic automation framework for acceptance testing and robotic process automation (RPA)
   description: >
     Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
-  homepage: https://robotframework.org
+  homepage: https://pypi.org/project/robotframework
   repository: https://github.com/robotframework/robotframework
-  documentation: https://robotframework.org/robotframework/${{ version }}/RobotFrameworkUserGuide.html
+  documentation: https://robotframework.org/robotframework
 
 extra:
   feedstock-name: robotframework
