@@ -42,28 +42,16 @@ outputs:
         - python >=${{ python_min }}
     tests:
       - python:
+          imports: robot
           pip_check: true
           python_version:
             - ${{ python_min }}.*
             - ${{ python_check_max }}.*
-          imports:
-            - robot
-            - robot.api
-            - robot.conf
-            - robot.htmldata
-            - robot.libdocpkg
-            - robot.libraries
-            - robot.model
-            - robot.output
-            - robot.output.console
-            - robot.parsing
-            - robot.reporting
-            - robot.result
-            - robot.running
-            - robot.running.arguments
-            - robot.running.timeouts
-            - robot.utils
-            - robot.variables
+      - package_contents:
+          site_packages:
+            - robot/**
+            - robotframework-${{ version }}.dist-info/**
+          strict: true
       - requirements:
           run:
             - python ${{ python_min }}.*
@@ -74,6 +62,8 @@ outputs:
           - robot test-${{ version }}.robot
           - rebot output.xml
           - libdoc test-${{ version }}.robot test.html
+          - robot --version --nostatusrc
+          - robot --version --nostatusrc | ${{ "grep -iE" if unix else "findstr /c" }} " ${{ version | replace('.', '\\.') }} "
 
   - package:
       name: _robotframework_tests
@@ -81,7 +71,7 @@ outputs:
       noarch: generic
     requirements:
       run:
-        - ${{ pin_subpackage("robotframework", upper_bound="x.x.x") }}
+        - ${{ pin_subpackage("robotframework", exact=True) }}
         - python ${{ python_min }}.*
     tests:
       - files:
