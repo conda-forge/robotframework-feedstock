@@ -10,7 +10,7 @@ recipe:
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/r/robotframework/robotframework-${{ version }}.tar.gz
+  - url: https://files.pythonhosted.org/packages/source/r/robotframework/robotframework-${{ version }}.tar.gz
     sha256: ff6233ff752a200ece4d0a6c59f6f9f7d0e96dcff0a7a3458296b997b812482e
     target_directory: dist
   - url: https://github.com/robotframework/robotframework/archive/v${{ version }}.tar.gz
@@ -27,7 +27,7 @@ outputs:
     build:
       script:
         - cd dist
-        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
       python:
         entry_points:
           - robot = robot.run:run_cli
@@ -96,6 +96,7 @@ outputs:
             - docutils
             - jsonschema
             - lxml
+            - markdown
             - pillow
             - pygments
             - pyyaml
