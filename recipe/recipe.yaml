@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "7.5"
+  version: "7.5.1"
   python_check_max: "3.14"
 
 recipe:
@@ -11,10 +11,10 @@ recipe:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/r/robotframework/robotframework-${{ version }}.tar.gz
-    sha256: ff6233ff752a200ece4d0a6c59f6f9f7d0e96dcff0a7a3458296b997b812482e
+    sha256: 00f63dc7b0477a137f8a9c1f2e14db8084a4d187a76f3fec6c2567875c32b932
     target_directory: dist
   - url: https://github.com/robotframework/robotframework/archive/v${{ version }}.tar.gz
-    sha256: 839070f2612be5ae7519f6e4f77b19fc7c8e4ea0b873e802019dbb12efa9428b
+    sha256: bdbea9c9531cb44a88f1769b844e703fde16525d4d6a12e4bcc2240f3b39c63c
     target_directory: src
 
 build:
